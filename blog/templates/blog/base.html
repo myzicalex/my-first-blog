@@ -11,8 +11,10 @@
     <body>
         <div class="page-header">
             <h1><a href="">Alex Blog</a></h1>
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
         </div>
-
         <div class="content conteiner">
             <div class="row">
                 <div class="col-md-8">
